@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Nutritional Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .food-name {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .nutrition {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .nutrition p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .ingredients {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .ingredients p {
+            margin: 5px 0;
+            font-size: 16px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Fresh Bites Restaurant</div>
+        <div class="food-name">Grilled Chicken Salad</div>
+
+        <div class="nutrition">
+            <p><strong>Calories:</strong> 420 kcal</p>
+            <p><strong>Protein:</strong> 35g</p>
+            <p><strong>Carbs:</strong> 18g</p>
+            <p><strong>Fat:</strong> 22g</p>
+        </div>
+
+        <div class="ingredients">
+            <p><strong>Ingredients:</strong> Grilled chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil vinaigrette</p>
+        </div>
+    </div>
+</body>
+</html>
