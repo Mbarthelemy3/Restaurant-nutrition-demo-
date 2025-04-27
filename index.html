@@ -2,95 +2,226 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fresh Bites | Grilled Chicken Salad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Owl House Menu with Nutrition</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --border-light: #ddd;
+      --text-base: #333;
+      --text-muted: #666;
+      --accent-cal: #ffb347;
+      --accent-fat: #e9967a;
+      --accent-carb: #87cefa;
+      --accent-prot: #98fb98;
+      --accent-sod: #dda0dd;
+    }
     body {
       font-family: 'Roboto', sans-serif;
-      background: #f0f0f0;
-      color: #333;
+      background: var(--bg-light);
+      color: var(--text-base);
       margin: 0;
       padding: 0;
     }
     .container {
-      max-width: 600px;
-      margin: 40px auto;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+    section {
+      margin: 60px 0;
+      padding: 20px 0;
+      border-top: 2px solid var(--border-light);
+    }
+    h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sort-controls select,
+    .sort-controls button {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      padding: 5px 10px;
+      font-size: 0.85rem;
+      color: var(--text-base);
+      border-radius: 4px;
+    }
+    .item {
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .header {
-      background: #4CAF50;
-      color: #fff;
       padding: 20px;
-      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    .content {
-      padding: 20px;
-    }
-    .food-title {
-      font-size: 22px;
-      font-weight: 700;
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 10px;
+    }
+    .title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .tags {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: 8px;
+    }
+    .score {
+      min-width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 10px 0 15px;
+    }
+    .nutrition {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .nutrition li {
+      list-style: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 8px;
+      border-radius: 4px;
+      color: #fff;
       text-align: center;
     }
-    .nutrition-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
+    .cal { background: var(--accent-cal); }
+    .fat { background: var(--accent-fat); }
+    .carb { background: var(--accent-carb); }
+    .prot { background: var(--accent-prot); }
+    .sod { background: var(--accent-sod); }
+    details {
+      margin-top: 8px;
     }
-    .nutrition-table th,
-    .nutrition-table td {
-      padding: 10px;
-      border: 1px solid #ddd;
+    summary {
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-base);
     }
-    .nutrition-table th {
-      background: #f7f7f7;
-      text-align: left;
-    }
-    .ingredients,
-    .allergens {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-    .ingredients strong,
-    .allergens strong {
-      display: block;
-      margin-bottom: 5px;
+    .details-list {
+      list-style: none;
+      padding-left: 16px;
+      margin: 8px 0 0;
+      font-size: 0.8rem;
+      color: var(--text-base);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h1>Fresh Bites Restaurant</h1>
-    </div>
-    <div class="content">
-      <div class="food-title">Grilled Chicken Salad</div>
-      <table class="nutrition-table">
-        <tr><th>Nutrient</th><th>Amount</th></tr>
-        <tr><td>Calories</td><td>420 kcal</td></tr>
-        <tr><td>Protein</td><td>35 g</td></tr>
-        <tr><td>Carbohydrates</td><td>18 g</td></tr>
-        <tr><td>Fat</td><td>22 g</td></tr>
-        <tr><td>Fiber</td><td>4 g</td></tr>
-        <tr><td>Sugar</td><td>6 g</td></tr>
-      </table>
-      <div class="ingredients">
-        <strong>Ingredients:</strong>
-        Grilled chicken breast, mixed greens (lettuce, spinach), cherry tomatoes, cucumber, red onion, olive oil vinaigrette (olive oil, vinegar, herbs)
-      </div>
-      <div class="allergens">
-        <strong>Allergens:</strong>
-        Contains: None
-      </div>
-    </div>
+    <header>
+      <h1>The Owl House</h1>
+      <p class="note">Please inform your server of any allergies or dietary restrictions. (gf = gluten-free, vg = vegetarian, v = vegan)</p>
+    </header>
+    <div id="menu"></div>
   </div>
+  <script>
+    const DVS = { fat:78, carbs:275, protein:50, sodium:2300 };
+    const extraNutrients = ['cholesterol','transFat','addedSugars','potassium','calcium','iron','vitaminA','vitaminC','vitaminD','magnesium','omega3','omega6'];
+    const menuData = [ /* existing menuData unchanged */ ];
+
+    function getScoreColor(score) {
+      if (score >= 8) return 'var(--accent-prot)';
+      if (score >= 5) return 'var(--accent-cal)';
+      return 'var(--accent-fat)';
+    }
+
+    function sortSection(section) {
+      const nutrient = document.getElementById(`nutrient-${section}`).value;
+      const order = document.getElementById(`order-${section}`).value;
+      const sec = menuData.find(s => s.section === section);
+      sec.items.sort((a, b) => {
+        let valA = a.nutrition[nutrient] || parseFloat(a.extras[nutrient]) || 0;
+        let valB = b.nutrition[nutrient] || parseFloat(b.extras[nutrient]) || 0;
+        return order === 'asc' ? valA - valB : valB - valA;
+      });
+      document.getElementById('menu').innerHTML = renderMenu(menuData);
+    }
+
+    function renderNutrition(n) {
+      const dv = (v, k) => k === 'calories' ? '-' : Math.round(v / DVS[k] * 100) + '%';
+      return `<ul class="nutrition">
+        <li class="cal">${n.calories} kcal</li>
+        <li class="fat">${n.fat}g (${dv(n.fat, 'fat')})</li>
+        <li class="carb">${n.carbs}g (${dv(n.carbs, 'carbs')})</li>
+        <li class="prot">${n.protein}g (${dv(n.protein, 'protein')})</li>
+        <li class="sod">${n.sodium}mg (${dv(n.sodium, 'sodium')})</li>
+      </ul>`;
+    }
+
+    function renderExtras(ex) {
+      return `<details>
+        <summary>More Nutrients</summary>
+        <ul class="details-list">
+          ${extraNutrients.map(nut => `<li><strong>${nut.charAt(0).toUpperCase() + nut.slice(1)}:</strong> ${ex[nut]}</li>`).join('')}
+        </ul>
+      </details>`;
+    }
+
+    function renderMenu(data) {
+      return data.map(sec => {
+        const opts = Object.keys(data[0].items[0].nutrition).concat(extraNutrients);
+        const nutrientOptions = opts.map(o => `<option value="${o}">${o}</option>`).join('');
+        return `<section>
+          <h2>${sec.section}
+            <span class="sort-controls">
+              <select id="nutrient-${sec.section}">${nutrientOptions}</select>
+              <select id="order-${sec.section}"><option value="asc">Low→High</option><option value="desc">High→Low</option></select>
+              <button onclick="sortSection('${sec.section}')">Sort</button>
+            </span>
+          </h2>
+          ${sec.items.map(item => {
+            const color = getScoreColor(item.score);
+            return `<div class="item">
+              <div class="item-header">
+                <div><span class="title">${item.name}</span> ${item.tags ? `<span class="tags">(${item.tags.join(', ')})</span>` : ''}</div>
+                <div class="score" style="background:${color};">${item.score}/10</div>
+              </div>
+              <div class="desc">${item.desc}</div>
+              ${renderNutrition(item.nutrition)}
+              ${renderExtras(item.extras)}
+            </div>`;
+          }).join('')}
+        </section>`;
+      }).join('');
+    }
+
+    document.getElementById('menu').innerHTML = renderMenu(menuData);
+  </script>
 </body>
 </html>
