@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Nutritional Info</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .food-name {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .nutrition {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .nutrition p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        .ingredients {
-            margin-top: 30px;
-            text-align: left;
-        }
-        .ingredients p {
-            margin: 5px 0;
-            font-size: 16px;
-            font-style: italic;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fresh Bites | Grilled Chicken Salad</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .food-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .nutrition-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .nutrition-table th,
+    .nutrition-table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .nutrition-table th {
+      background: #f7f7f7;
+      text-align: left;
+    }
+    .ingredients,
+    .allergens {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .ingredients strong,
+    .allergens strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">Fresh Bites Restaurant</div>
-        <div class="food-name">Grilled Chicken Salad</div>
-
-        <div class="nutrition">
-            <p><strong>Calories:</strong> 420 kcal</p>
-            <p><strong>Protein:</strong> 35g</p>
-            <p><strong>Carbs:</strong> 18g</p>
-            <p><strong>Fat:</strong> 22g</p>
-        </div>
-
-        <div class="ingredients">
-            <p><strong>Ingredients:</strong> Grilled chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil vinaigrette</p>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>Fresh Bites Restaurant</h1>
     </div>
+    <div class="content">
+      <div class="food-title">Grilled Chicken Salad</div>
+      <table class="nutrition-table">
+        <tr><th>Nutrient</th><th>Amount</th></tr>
+        <tr><td>Calories</td><td>420 kcal</td></tr>
+        <tr><td>Protein</td><td>35 g</td></tr>
+        <tr><td>Carbohydrates</td><td>18 g</td></tr>
+        <tr><td>Fat</td><td>22 g</td></tr>
+        <tr><td>Fiber</td><td>4 g</td></tr>
+        <tr><td>Sugar</td><td>6 g</td></tr>
+      </table>
+      <div class="ingredients">
+        <strong>Ingredients:</strong>
+        Grilled chicken breast, mixed greens (lettuce, spinach), cherry tomatoes, cucumber, red onion, olive oil vinaigrette (olive oil, vinegar, herbs)
+      </div>
+      <div class="allergens">
+        <strong>Allergens:</strong>
+        Contains: None
+      </div>
+    </div>
+  </div>
 </body>
 </html>
